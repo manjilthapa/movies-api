@@ -1,7 +1,9 @@
-import express from "express"
+import mongoose from "mongoose"
+import { connectDB, createApp } from "./initial-config.js"
 
-const app = express()
-
-app.listen(3000, () => {
+connectDB()
+const app = createApp()
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
   console.log("### server is running on port 3000 ###")
 })
