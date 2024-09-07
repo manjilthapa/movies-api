@@ -8,7 +8,7 @@ export const createApp = () => {
   const app = express()
   app.use(express.json())
 
-  app.use("/api/v1/movies", movieRoutes)
+  app.use("/api/v1/movie", movieRoutes)
 
   return app
 }
